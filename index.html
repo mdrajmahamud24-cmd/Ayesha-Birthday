@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101722">
+<title>Ayesha's Birthday Surprise ♡</title>
+<style>
+:root{--bg:#0b111b;--pink:#ff7892;--cream:#f7e7d5;--muted:#c8c7cf}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top,#26334a 0,#0b111b 55%);color:#fff;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;line-height:1.7;min-height:100vh}
+main{max-width:760px;margin:auto;padding:18px}
+section{margin:18px 0;padding:24px 20px;border:1px solid #ffffff18;border-radius:22px;background:linear-gradient(145deg,#182333ef,#111925f2);box-shadow:0 12px 35px #0004}
+h1{font-size:clamp(2.4rem,10vw,4.3rem);line-height:1.08;margin:12px 0;color:#fff;font-family:Georgia,serif;font-weight:500}
+h2{margin:0 0 12px;color:#ffd3dc;font-size:1.35rem}
+p{margin:8px 0}
+.center{text-align:center}
+.kicker{letter-spacing:.12em;text-transform:uppercase;color:#ffd3dc;font-size:.78rem}
+.sub,.note{color:var(--muted)}
+.sub{max-width:480px}
+button{border:0;border-radius:999px;background:var(--pink);color:#23121a;font-weight:700;padding:13px 22px;font-size:1rem;cursor:pointer;margin-top:18px}
+input{width:100%;padding:14px 16px;border:1px solid #ffffff38;border-radius:13px;background:#090f18;color:#fff;font-size:1rem;outline:none}
+input:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff789226}
+.heart{color:var(--pink)}
+#lockScreen{min-height:calc(100vh - 36px);display:flex;align-items:center;justify-content:center}
+.lockCard{width:100%;max-width:520px;text-align:center;padding:30px 22px;background:linear-gradient(150deg,#192638f5,#101722f5);border:1px solid #ffffff20;border-radius:26px;box-shadow:0 18px 50px #0006}
+.lockIcon{font-size:2.4rem;display:block;margin-bottom:8px}
+#passwordForm{margin-top:22px}
+#error{display:none;color:#ffafbd;font-size:.93rem;margin-top:12px}
+#error.show{display:block}
+#birthdaySite{display:none}
+#birthdaySite.show{display:block}
+.hero{min-height:78vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(#08111b66,#08111bcc),url('YOUR_COVER_PHOTO_URL_HERE') center/cover no-repeat;border:0}
+.paper{background:linear-gradient(145deg,#f5e2ca,#ead0b2);color:#30252a;border-radius:16px;padding:22px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:3px solid #fff2;background:#293445}
+.quote{font-family:Georgia,serif;font-size:1.15rem}
+footer{text-align:center;color:#c9c8cf;padding:20px 10px 34px;font-size:.85rem}
+@media(min-width:600px){main{padding:28px}.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<main>
+  <section id="lockScreen">
+    <div class="lockCard">
+      <span class="lockIcon">🔐 <span class="heart">♡</span></span>
+      <div class="kicker">A little surprise for you</div>
+      <h1 style="font-size:clamp(2rem,8vw,3rem)">Ayesha</h1>
+      <p class="sub" style="margin:0 auto">তোমার জন্য একটা ছোট্ট সারপ্রাইজ আছে…</p>
+      <p class="note">স্মৃতির সঙ্গে জড়িয়ে থাকা পাসওয়ার্ডটা লিখে ভেতরে এসো। ♡</p>
+      <form id="passwordForm">
+        <input id="passwordInput" type="password" placeholder="Enter password" autocomplete="off" aria-label="Password" required>
+        <button type="submit">Unlock My Surprise ♡</button>
+      </form>
+      <p id="error" role="alert">Oops! পাসওয়ার্ডটা মেলেনি। আবার চেষ্টা করো, Ayesha ♡</p>
+      <p class="note" style="font-size:.85rem;margin-top:22px">Hint: যে জায়গায় তোমাদের গল্পের শুরু… 🎮</p>
+    </div>
+  </section>
+
+  <div id="birthdaySite">
+    <section class="hero">
+      <div class="kicker">A little birthday surprise</div>
+      <h1>Happy Birthday<br><span style="color:#ffb4c2">Ayesha</span> <span class="heart">♡</span></h1>
+      <p class="sub">আজকের দিনটা তোমার জন্য সুন্দর হোক—অনেক শান্তি, হাসি আর ভালো মুহূর্তে ভরে উঠুক।</p>
+      <button onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">তোমার জন্য একটা ছোট্ট বার্তা ♡</button>
+      <p class="note">ছোট্ট একটা শুভেচ্ছা, মন থেকে।</p>
+    </section>
+
+    <section id="message">
+      <h2>একটু মনের কথা 💌</h2>
+      <div class="paper">
+        <p>প্রিয় Ayesha,</p>
+        <p>শুভ জন্মদিন! 🎂</p>
+        <p>তোমার জীবনের নতুন বছরটা যেন আনন্দ, সুস্থতা, শান্তি আর সুন্দর সুযোগ নিয়ে আসে। তোমার স্বপ্নগুলো একে একে পূরণ হোক, আর প্রতিদিন এমন কিছু কারণ খুঁজে পাও যাতে মন খুলে হাসতে পারো।</p>
+        <p>আমাদের কিছু স্মৃতি আমার কাছে মূল্যবান হয়ে থাকবে। আজকের দিনে শুধু চাই, তুমি ভালো থাকো এবং নিজের মতো করে সুন্দর একটা জীবন গড়ে তোলো।</p>
+        <p>তোমার জন্য রইল আন্তরিক শুভকামনা। <span class="heart">♡</span></p>
+        <p>— শুভ জন্মদিন, Ayesha</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>কিছু সুন্দর স্মৃতি 📸</h2>
+      <p class="note">নিচের ছবিগুলো তোমাদের পছন্দের ছবি দিয়ে বদলে নিও।</p>
+      <div class="gallery">
+        <img src="YOUR_PHOTO_1_URL_HERE" alt="একটি প্রিয় স্মৃতি">
+        <img src="YOUR_PHOTO_2_URL_HERE" alt="আরেকটি প্রিয় স্মৃতি">
+        <img src="YOUR_PHOTO_3_URL_HERE" alt="একটি সুন্দর মুহূর্ত">
+      </div>
+    </section>
+
+    <section class="center">
+      <h2>তোমার জন্য শুভকামনা ✨</h2>
+      <p class="quote">“জীবন তোমাকে অনেক সুন্দর দিন, ভালো মানুষ আর নতুন সম্ভাবনা উপহার দিক।”</p>
+      <p>Happy Birthday, Ayesha! <span class="heart">♡</span></p>
+      <p class="note">সবসময় ভালো থেকো, নিজের যত্ন নিও।</p>
+    </section>
+    <footer>Made with care ♡ · A small birthday wish for Ayesha</footer>
+  </div>
+</main>
+<script>
+/*
+  Birthday surprise gate.
+  Note: This is a playful client-side gate, not strong security. The password
+  is present in the HTML source and can be discovered by someone inspecting it.
+*/
+const correctPassword = "free fire social island";
+const form = document.getElementById("passwordForm");
+const input = document.getElementById("passwordInput");
+const error = document.getElementById("error");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  if (input.value.trim().toLowerCase() === correctPassword) {
+    document.getElementById("lockScreen").style.display = "none";
+    document.getElementById("birthdaySite").classList.add("show");
+    window.scrollTo({top: 0, behavior: "smooth"});
+  } else {
+    error.classList.add("show");
+    input.value = "";
+    input.focus();
+  }
+});
+</script>
+</body>
+</html>
